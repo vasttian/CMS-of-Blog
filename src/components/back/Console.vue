@@ -53,8 +53,16 @@
       }
     },
     components: { StatusBar },
-    computed: mapState(['user']),
-    methods: mapMutations(['SET_USER']),
+    computed: {
+      ...mapState([
+        'user',
+      ]),
+    },
+    methods: {
+      ...mapMutations([
+        'SET_USER',
+      ]),
+    },
   }
 </script>
 <style lang="sass" rel="stylesheet/scss" scoped>

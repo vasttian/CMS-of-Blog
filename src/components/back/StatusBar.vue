@@ -28,7 +28,9 @@
         this.SET_USER({ name: '', pwd: '', });
         this.$router.push('/');
       },
-      ...mapMutations(['SET_USER']),
+      ...mapMutations([
+        'SET_USER',
+      ]),
     },
     computed: {
       time() {
@@ -43,7 +45,9 @@
 
         return '晚上';
       },
-      ...mapState(['user']),
+      ...mapState([
+        'user',
+      ]),
     },
   }
 </script>
