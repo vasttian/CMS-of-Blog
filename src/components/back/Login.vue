@@ -21,7 +21,7 @@
           v-model.trim="pwd"
         >
       </p>
-      <p class="info">{{info}}</p>
+      <p class="info">{{ info }}</p>
       <p>
         <button @click="doLogin()">登录
         </button>
@@ -31,7 +31,7 @@
 </template>
 <script>
   import { mapActions } from 'vuex';
-  import { set }  from '../../assets/js/cookieUtil';
+  import { set } from '../../assets/js/cookieUtil';
 
   export default{
     data() {
@@ -51,7 +51,7 @@
           return this.info = '请输入正常的密码';
         }
 
-        this.login({name: this.name, pwd: this.pwd})
+        this.login({ name: this.name, pwd: this.pwd, })
           .then(() => {
             const date = new Date(Date.now() + 60000 * 30);
             set('user', this.name, date, '/', window.location.hostname);
