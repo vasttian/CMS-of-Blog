@@ -7,19 +7,19 @@
       </div>
       <menu class="navigation">
         <ul>
-          <router-link :to="{name: 'archive'}" tag="li">
+          <router-link :to="{ name: 'archive' }" tag="li">
             <i class="fa fa-star fa-fw"></i>
             <span>总览</span>
           </router-link>
-          <router-link :to="{name: 'articles'}" tag="li">
+          <router-link :to="{ name: 'articles' }" tag="li">
             <i class="fa fa-file-text fa-fw"></i>
             <span>文章</span>
           </router-link>
-          <router-link :to="{name: 'links'}" tag="li">
+          <router-link :to="{ name: 'links' }" tag="li">
             <i class="fa fa-list-ul fa-fw"></i>
             <span>链接</span>
           </router-link>
-          <router-link :to="{name: 'account'}" tag="li">
+          <router-link :to="{ name: 'account' }" tag="li">
             <i class="fa fa-user fa-fw"></i>
             <span>账户</span>
           </router-link>
@@ -44,7 +44,12 @@
       }
 
       if (user && !this.user.name) {
-        this.SET_USER({ name: user, pwd: '', });
+        // this.SET_USER({ name: user, pwd: '', });
+        const user = {
+          name: user,
+          pwd: '',
+        }
+        this.$store.dispatch('setUser', user);
       }
     },
     components: { StatusBar },

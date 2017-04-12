@@ -90,5 +90,8 @@ export default {
           return Promise.reject(response.data.msg)
         }
       })
-  }
+  },
+  setUser({ commit }, value) {
+    commit('SET_USER', value);
+  },
 }

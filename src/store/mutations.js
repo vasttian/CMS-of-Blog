@@ -15,7 +15,7 @@ export default {
     state.isToasting = isToasting
   },
   SET_USER: (state, user) => {
-    state.user = user
+    state.user = user;
   },
   UPDATE_CONTENT: (state, content) => {
     state.article.content = content
