@@ -3,7 +3,9 @@
 </template>
 <script>
   export default{
-    mounted(){
+    mounted() {
+
+      // 每个页面的鼠标移动特效
       const canvas = document.getElementById('canvas')
       const ctx = canvas.getContext('2d')
       let width = window.innerWidth
@@ -57,6 +59,7 @@
           if (node.x > width || node.x < 0) {
             node.vx = -node.vx
           }
+
           if (node.y > height || node.y < 0) {
             node.vy = -node.vy
           }

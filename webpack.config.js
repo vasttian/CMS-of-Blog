@@ -7,8 +7,8 @@ const extractCSSFromSASS = new ExtractTextPlugin('index.css')
 
 module.exports = {
   entry: {
-    main: './src/main.js',
-    setup: './src/setup.js'
+    app: './src/main.js',
+    setup: './src/setup.js',
     // vendor: [
     //   'vue',
     //   'vue-router',
@@ -77,6 +77,7 @@ module.exports = {
     ])
   ],
   resolve: {
+    extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue'
     }
