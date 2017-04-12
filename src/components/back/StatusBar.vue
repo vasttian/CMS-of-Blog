@@ -1,13 +1,14 @@
 <template>
   <header class="statusBar">
-    <router-link :to="{path:'/archive'}"
-                 tag="button"
-                 class="home">
+    <router-link
+      :to="{ path: '/archive' }"
+      tag="button"
+      class="home">
       <i class="fa fa-fire fa-2x"></i>
     </router-link>
     <div class="user">
       <span>
-          {{time}}好, {{user.name}}
+        {{ time }}好, {{ user.name }}
       </span>
       <button @click="logout">
         <span>登出</span>
@@ -17,27 +18,33 @@
   </header>
 </template>
 <script>
-  import {unset} from '../../assets/js/cookieUtil'
-  import {mapState, mapMutations} from 'vuex'
+  import { unset } from '../../assets/js/cookieUtil';
+  import { mapState, mapMutations } from 'vuex';
 
-  export default{
+  export default {
     methods: {
       logout() {
-        unset('user', '/', window.location.hostname)
-        this.SET_USER({name: '', pwd: ''})
-        this.$router.push('/')
+        unset('user', '/', window.location.hostname);
+        this.SET_USER({ name: '', pwd: '', });
+        this.$router.push('/');
       },
-      ...mapMutations(['SET_USER'])
+      ...mapMutations(['SET_USER']),
     },
     computed: {
-      time(){
-        const hours = new Date().getHours()
-        if (hours > 5 && hours < 12)  return '早上'
-        if (hours > 11 && hours < 19) return '下午'
-        return '晚上'
+      time() {
+        const hours = new Date().getHours();
+        if (hours > 5 && hours < 12) {
+          return '早上';
+        }
+
+        if (hours > 11 && hours < 19) {
+          return '下午';
+        }
+
+        return '晚上';
       },
-      ...mapState(['user'])
-    }
+      ...mapState(['user']),
+    },
   }
 </script>
 <style lang="sass" rel="stylesheet/scss" scoped>
