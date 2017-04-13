@@ -17,9 +17,13 @@
 
   export default {
     created() {
-      this.$store.dispatch('getLinks')
+      this.$store.dispatch('getLinks');
     },
-    computed: mapState(['links'])
+    computed: {
+      ...mapState([
+        'links',
+      ]),
+    },
   };
 </script>
 <style lang="sass" rel="stylesheet/scss" scoped>

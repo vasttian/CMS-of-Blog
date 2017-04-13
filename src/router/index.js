@@ -55,8 +55,8 @@ const routes = [
         name: 'account',
         component: Account,
       },
-    ]
-  }
+    ],
+  },
 ];
 
 const router = new VueRouter({
