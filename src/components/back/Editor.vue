@@ -76,7 +76,7 @@
         },
         set(value) {
           this.$store.commit('UPDATE_CONTENT', value);
-        }
+        },
       },
       title: {
         get() {
