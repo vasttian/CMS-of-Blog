@@ -10,7 +10,7 @@
         <th>日期</th>
         <th>选项</th>
       </tr>
-      <tr v-for="(article,index) in articles">
+      <tr v-for="(article, index) in articles">
         <router-link
           :to="{ name: 'article', query: { id: article._id }}"
           tag="td">
@@ -50,7 +50,7 @@
         'deleteArticle',
       ]),
     },
-  }
+  };
 </script>
 <style lang="sass" rel="stylesheet/scss" scoped>
   @import "../../style/mixins.scss";
