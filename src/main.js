@@ -1,9 +1,9 @@
-import Vue  from 'vue';
-import VueResource  from 'vue-resource';
-import App  from './App.vue';
+import Vue from 'vue';
+import VueResource from 'vue-resource';
+import App from './App.vue';
 
-import store  from './store';
-import router  from './router';
+import store from './store';
+import router from './router';
 
 import './style/index.scss';
 

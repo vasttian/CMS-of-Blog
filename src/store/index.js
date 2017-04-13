@@ -1,10 +1,10 @@
-import Vue        from 'vue'
-import Vuex       from 'vuex'
-import actions    from './actions'
-import mutations  from './mutations'
-import getters    from './getters'
+import Vue from 'vue'
+import Vuex from 'vuex'
+import actions from './actions'
+import mutations from './mutations'
+import getters from './getters'
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
@@ -21,11 +21,12 @@ const store = new Vuex.Store({
       toastResolve () {
       },
       toastReject () {
-      }
-    }
+      },
+    },
   },
   getters,
   mutations,
-  actions
-})
-export default store
+  actions,
+});
+
+export default store;

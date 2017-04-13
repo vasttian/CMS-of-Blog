@@ -4,13 +4,13 @@
     <div class="password">
       <i class="fa fa-key fa-fw"></i>
       <input type="password"
-             placeholder="输入新密码"
-             v-model="pwd">
+        placeholder="输入新密码"
+        v-model="pwd">
       <br>
       <i class="fa fa-key fa-fw"></i>
       <input type="password"
-             placeholder="再输入一次"
-             v-model="pwdRepeat">
+        placeholder="再输入一次"
+        v-model="pwdRepeat">
     </div>
     <div class="panel">
       <button @click="savePwd">保存</button>
@@ -18,21 +18,21 @@
   </section>
 </template>
 <script>
-  export default{
-    data(){
+  export default {
+    data() {
       return {
         pwd: '',
-        pwdRepeat: ''
+        pwdRepeat: '',
       }
     },
     methods: {
-      savePwd(){
+      savePwd() {
         if (this.pwd === this.pwdRepeat) {
-          this.$store.dispatch('savePwd', this.pwd)
+          this.$store.dispatch('savePwd', this.pwd);
         }
-      }
-    }
-  }
+      },
+    },
+  };
 </script>
 <style lang="sass" rel="stylesheet/scss" scoped>
   @import "../../style/mixins.scss";

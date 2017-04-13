@@ -6,20 +6,21 @@
     <ul class="menu">
       <li v-for="link in links">
         <a :href="link.href">
-          {{link.name}}
+          {{ link.name }}
         </a>
       </li>
     </ul>
   </header>
 </template>
 <script>
-  import {mapState} from 'vuex'
-  export default{
-    created(){
+  import { mapState } from 'vuex';
+
+  export default {
+    created() {
       this.$store.dispatch('getLinks')
     },
     computed: mapState(['links'])
-  }
+  };
 </script>
 <style lang="sass" rel="stylesheet/scss" scoped>
 

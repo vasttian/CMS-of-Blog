@@ -94,4 +94,4 @@ export default {
   setUser({ commit }, value) {
     commit('SET_USER', value);
   },
-}
+};
