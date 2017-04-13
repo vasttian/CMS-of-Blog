@@ -4,17 +4,18 @@
     <section class="archive">
       <ul>
         <li class="item"
-            v-for="year in archive.years">
+          v-for="year in archive.years">
           <p>{{year}}</p>
           <ul>
             <li v-for="article in archive.articleInYear[year]">
               <span class="date">
-                  {{article.date | toDate}}
+                {{ article.date | toDate }}
               </span>
-              <router-link :to="{path:'/article',query:{id:article._id}}"
-                           tag="span"
-                           class="title">
-                {{article.title}}
+              <router-link
+                :to="{path:'/article',query:{ id: article._id }}"
+                tag="span"
+                class="title">
+                {{ article.title }}
               </router-link>
             </li>
           </ul>
@@ -25,22 +26,34 @@
   </main>
 </template>
 <script>
-  import {mapState, mapGetters, mapActions} from 'vuex'
-  import MyHeader   from './MyHeader.vue'
-  import MyFooter   from './MyFooter.vue'
-  import Spinner    from '../share/Spinner.vue'
+  import { mapState, mapGetters, mapActions } from 'vuex';
+  import MyHeader from './MyHeader.vue';
+  import MyFooter from './MyFooter.vue';
+  import Spinner from '../share/Spinner.vue';
 
-  export default{
-    created(){
-      this.getArticles()
+  export default {
+    created() {
+      this.getArticles(),
     },
     computed: {
-      ...mapState(['articles']),
-      ...mapGetters(['archive'])
+      ...mapState([
+        'articles',
+      ]),
+      ...mapGetters([
+        'archive',
+      ]),
     },
-    methods: {...mapActions(['getArticles'])},
-    components: {Spinner, MyHeader, MyFooter}
-  }
+    methods: {
+      ...mapActions([
+        'getArticles',
+      ]),
+    },
+    components: {
+      Spinner,
+      MyHeader,
+      MyFooter,
+    },
+  };
 </script>
 <style lang="sass" rel="stylesheet/scss" scoped>
   main.wrap {
