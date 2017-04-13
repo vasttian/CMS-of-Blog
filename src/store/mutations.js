@@ -1,26 +1,26 @@
 export default {
-  SET_ARTICLES: (state, articles) => {
+  SET_ARTICLES(state, articles) {
     state.articles = articles;
   },
-  SET_LINKS: (state, links) => {
+  SET_LINKS(state, links) {
     state.links = links;
   },
-  SET_ARTICLE: (state, article) => {
+  SET_ARTICLE(state, article) {
     state.article = article;
   },
-  LOADING_TOGGLE: (state, isLoading) => {
+  LOADING_TOGGLE(state, isLoading) {
     state.isLoading = isLoading;
   },
-  TOASTING_TOGGLE: (state, isToasting) => {
+  TOASTING_TOGGLE(state, isToasting) {
     state.isToasting = isToasting;
   },
-  SET_USER: (state, user) => {
+  SET_USER(state, user) {
     state.user = user;
   },
-  UPDATE_CONTENT: (state, content) => {
+  UPDATE_CONTENT(state, content) {
     state.article.content = content;
   },
-  UPDATE_TITLE: (state, title) => {
+  UPDATE_TITLE(state, title) {
     state.article.title = title;
   },
   UPDATE_LINK_NAME (state, {name, index}) {
