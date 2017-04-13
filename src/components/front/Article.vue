@@ -17,7 +17,7 @@
   import marked from '../../assets/js/marked.min';
   import hljs from '../../assets/js/highlight.pack';
   import MyHeader from './MyHeader.vue';
-  import MyFooter rom './MyFooter.vue';
+  import MyFooter from './MyFooter.vue';
 
   export default{
     created() {

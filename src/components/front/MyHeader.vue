@@ -1,7 +1,9 @@
 <template>
   <header class="myHeader">
     <div class="circle">
-      <img src="../../assets/img/me.jpg" alt="ycwalker">
+      <a href="/console">
+        <img src="../../assets/img/me.jpg" alt="ycwalker">
+      </a>
     </div>
     <ul class="menu">
       <li v-for="link in links">
