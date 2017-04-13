@@ -5,7 +5,7 @@
       <ul>
         <li class="item"
           v-for="year in archive.years">
-          <p>{{year}}</p>
+          <p>{{ year }}</p>
           <ul>
             <li v-for="article in archive.articleInYear[year]">
               <span class="date">
@@ -33,7 +33,7 @@
 
   export default {
     created() {
-      this.getArticles(),
+      this.getArticles()
     },
     computed: {
       ...mapState([
