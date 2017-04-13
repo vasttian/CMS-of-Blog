@@ -47,7 +47,7 @@
     methods: {
       save() {
         this.saveArticle()
-          .then(() => this.$router.push({name: 'articles'}))
+          .then(() => this.$router.push({ name: 'articles' }))
           .catch(err => console.log(err));
       },
       highlight() {

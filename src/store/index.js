@@ -12,7 +12,10 @@ const store = new Vuex.Store({
     isToasting: false,
     articles: [],
     article: {},
-    user: {name: '', pwd: ''},
+    user: {
+      name: '',
+      pwd: '',
+    },
     links: [],
     toast: {
       promise: null,
@@ -20,6 +23,7 @@ const store = new Vuex.Store({
       btnNum: 1,
       toastResolve () {
       },
+
       toastReject () {
       },
     },
